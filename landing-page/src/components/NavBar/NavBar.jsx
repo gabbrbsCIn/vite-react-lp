@@ -1,5 +1,5 @@
 
 
 export default function NavBar({ children }) {
-  return <header className="w-screen bg-black h-12">{children}</header>;
+  return <nav className="flex justify-between items-center bg-black h-[120px] px-60">{children}</nav>;
 }
