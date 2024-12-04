@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "./Logo";
 import NavButtons from "./NavButtons";
-import { Menu, Pointer } from "lucide-react";
+import { Menu } from "lucide-react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,15 +15,18 @@ export default function NavBar() {
         <div className="max-lg:hidden">
           <NavButtons />
         </div>
-        <div className="lg:hidden cursor-pointer">
-          <Menu onClick={toggleNavBar} color="#fff" />
-        </div>
+        <Menu
+          className="lg:hidden cursor-pointer"
+          onClick={toggleNavBar}
+          color="#fff"
+        />
       </nav>
-      {isOpen && (
-        <nav className="flex items-center flex-col py-6 flex-wrap bg-black">
-          <NavButtons type="col" />
+
+      <div className={`overflow-hidden transition-[max-height] duration-500 bg-black ${!isOpen ? 'max-h-96' : 'max-h-0'}`}>
+        <nav className="flex flex-col items-center py-6">
+          <NavButtons type="col"/>
         </nav>
-      )}
+      </div>
     </>
   );
 }
