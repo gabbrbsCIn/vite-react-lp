@@ -7,11 +7,11 @@ export default {
         poppins: ["Poppins", "sans-serif"],
       },
       colors: {
-        "logo-blue": "#6D95FC"
+        "logo-blue": "#6D95FC",
       },
       letterSpacing: {
-        widest: '.30em'
-      }
+        widest: ".30em",
+      },
     },
   },
   plugins: [],
