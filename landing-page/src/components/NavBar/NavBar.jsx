@@ -12,7 +12,7 @@ export default function NavBar() {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false); 
+        setIsOpen(false);
       }
     };
 
@@ -24,7 +24,7 @@ export default function NavBar() {
   }, [])
   return (
     <>
-      <nav className="flex justify-between items-center bg-black h-[120px] px-32 max-lg:px-8">
+      <nav className="flex justify-between items-center bg-white h-[120px] px-32 max-lg:px-8">
         <Logo />
         <div className={`max-lg:hidden`} >
           <NavButtons />
@@ -32,10 +32,10 @@ export default function NavBar() {
         <Menu
           className="lg:hidden cursor-pointer"
           onClick={toggleNavBar}
-          color="#fff"
+          color="#2261AA"
         />
       </nav>
-      <div className={`bg-black overflow-hidden transition-all duration-500  ${isOpen ? 'max-h-56' : 'max-h-0'}`}>
+      <div className={`bg-blue-900 overflow-hidden transition-all duration-500  ${isOpen ? 'max-h-56' : 'max-h-0'}`}>
         <nav className={`flex flex-col transition ${isOpen ? 'animate-fade-down' : ''} items-center py-6`}>
           <NavButtons type="col" />
         </nav>
