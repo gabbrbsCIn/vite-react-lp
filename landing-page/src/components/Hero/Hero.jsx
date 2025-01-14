@@ -20,7 +20,7 @@ export default function Hero() {
                 <img
                     src={men}
                     alt="Men working"
-                    className="w-full md:w-[500px] lg:w-[700px] object-contain rounded-xl m-4"
+                    className="w-full sm:w-[300px] md:w-[500px] lg:w-[700px] object-contain rounded-xl m-4"
                 />
             </div>
         </section>
