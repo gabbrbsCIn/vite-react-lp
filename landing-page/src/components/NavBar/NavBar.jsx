@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import NavButtons from "./NavButtons";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,11 +30,23 @@ export default function NavBar() {
         <div className="hidden lg:flex">
           <NavButtons />
         </div>
-        <Menu
-          className="lg:hidden cursor-pointer"
+        <button
+          className="lg:hidden cursor-pointer relative w-10 h-10 flex justify-center items-center"
           onClick={toggleNavBar}
-          color="#2261AA"
-        />
+        >
+          <span
+            className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 ${isOpen ? "rotate-90 scale-0" : "rotate-0 scale-100"
+              }`}
+          >
+            <Menu color="#2261AA" />
+          </span>
+          <span
+            className={`absolute inset-0 flex items-center justify-center transition-transform duration-300 ${isOpen ? "rotate-0 scale-100" : "rotate-90 scale-0"
+              }`}
+          >
+            <X color="#2261AA" />
+          </span>
+        </button>
       </nav>
 
       <div
