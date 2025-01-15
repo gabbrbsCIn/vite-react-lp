@@ -4,30 +4,25 @@ import img3 from '../../assets/caldeiraria.jpg';
 
 export default function Feature() {
     return (
-        <section className="flex justify-center flex-col flex-wrap mt-32 py-12">
-            <h1 className="font-poppins text-blue-900 font-medium flex justify-center text-4xl">Provendo as Melhores Soluções</h1>
-            <div className='flex flex-row justify-between px-24 py-12 '>
-                <div className='flex justify-center items-center'>
-                    <img src={img1} alt="fabricação" className='lg:w-[350px] object-contain rounded-xl m-4 drop-shadow-2xl' />
-                    <h2 className='text-blue-900 text-2xl font-medium font-poppins'>Fabricação e Montagem de Estruturas</h2>
+        <section className="flex justify-center bg-gray-100  flex-col flex-wrap mt-64 py-12 animate-fade-down">
+            <h1 className="font-poppins text-blue-900 font-medium flex justify-center text-4xl">Provendo as Melhores Soluções Industriais Sob Medida</h1>
+            <p className="font-poppins text-gray-500 text-center mt-4">Qualidade, eficiência e segurança para impulsionar sua indústria.</p>
+            <div className='flex justify-center mt-10 space-x-15 items-center'>
+                <div className='flex flex-col w-1/2 space-y-10 px-24'>
+                    <div className='flex flex-col items-center justify-center p-6 bg-blue-900 rounded-xl shadow-lg'>
+                        <h1 className="font- poppins text-white font-medium text-xl mt-4">Manutenção Mecânica e Caldeiraria</h1>
+                        <p className="font-poppins text-sm text-gray-500 text-center mt-4">Realizamos soldagens TIG, MIG/MAG e eletrodo revestido, manutenção de caldeiras, bombas centrífugas e fabricação de tubulações em inox e aço carbono. Também oferecemos serviços de usinagem, oxicorte e calandragem, garantindo precisão e alta performance.</p>
+                    </div>
+                    <div className='flex flex-col items-center justify-center p-6 bg-blue-900 rounded-lg shadow-lg'>
+                        <h1 className="font-poppins text-white font-medium text-xl mt-4">Fabricação e Montagem de Estruturas</h1>
+                        <p className="font-poppins text-sm text-gray-500 text-center mt-4">Desenvolvemos e montamos plataformas, escadas, galpões metálicos, moegas, pipe racks e transportadores de correia. Nossas soluções são robustas e personalizadas para atender às necessidades de cada cliente.</p>
+                    </div>
+                    <div className='flex flex-col items-center justify-center p-6 bg-blue-900 rounded-lg shadow-lg'>
+                        <h1 className="font-poppins text-white font-medium text-xl mt-4">Instalações Industriais Personalizadas</h1>
+                        <p className="font-poppins text-sm text-gray-500 text-center mt-4">Executamos a montagem de filtros prensa, bombas de vácuo e equipamentos diversos, além de realizar mudanças de linhas de produção. Garantimos agilidade e eficiência em todas as etapas.</p>
+                    </div>
                 </div>
-                <p className='font-poppins text-blue-900 w-1/3 flex items-center'>Desenvolvemos e montamos plataformas, escadas, galpões metálicos, moegas, pipe racks e transportadores de correia. Nossas soluções são robustas e personalizadas para atender às necessidades de cada cliente.</p>
-            </div>
-            <hr className="my-8 border-t-2 border-gray-300 w-5/6" />
-            <div className='flex flex-row justify-between px-24 py-12 '>
-                <div className='flex justify-center items-center'>
-                    <img src={img2} alt="fabricação" className='lg:w-[350px] object-contain rounded-xl m-4 drop-shadow-2xl' />
-                    <h2 className='text-blue-900 text-2xl font-poppins'>Fabricação e Montagem de Estruturas</h2>
-                </div>
-                <p className='font-poppins text-blue-900 w-1/3 flex items-center'>Desenvolvemos e montamos plataformas, escadas, galpões metálicos, moegas, pipe racks e transportadores de correia. Nossas soluções são robustas e personalizadas para atender às necessidades de cada cliente.</p>
-            </div>
-            <hr className="my-8 border-t-2 border-gray-300 w-full" />
-            <div className='flex flex-row justify-between px-24 py-12 '>
-                <div className='flex justify-center items-center'>
-                    <img src={img3} alt="fabricação" className='lg:w-[350px] object-contain rounded-xl m-4 drop-shadow-2xl' />
-                    <h2 className='text-blue-900 text-2xl font-poppins'>Fabricação e Montagem de Estruturas</h2>
-                </div>
-                <p className='font-poppins text-blue-900 w-1/3 flex items-center'>Desenvolvemos e montamos plataformas, escadas, galpões metálicos, moegas, pipe racks e transportadores de correia. Nossas soluções são robustas e personalizadas para atender às necessidades de cada cliente.</p>
+                <img src={img1} alt="imagem industria" className='w-[50%] pr-24 ' />
             </div>
         </section>
     )
