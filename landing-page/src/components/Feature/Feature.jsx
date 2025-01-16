@@ -6,7 +6,31 @@ import { useState, useEffect, useRef } from 'react';
 export default function Feature() {
     const [currentImage, setCurrentImage] = useState(img1);
     const [animate, setAnimate] = useState(false);
-    
+    const [isVisible, setIsVisible] = useState(false);
+
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const entry = entries[0];
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
     const changeImage = (img) => {
         setCurrentImage(img);
         setAnimate("animate-fade animate-ease-out");
@@ -14,7 +38,9 @@ export default function Feature() {
     }
 
     return (
-        <section className="flex flex-col justify-center items-center bg-gray-100 mt-64 py-12 animate-fade-down">
+        <section ref={sectionRef}
+            className={`flex flex-col justify-center items-center mt-64 py-12 ${isVisible ? "animate-fade-down" : "opacity-0"
+                }`}>
 
             <h1 className="font-poppins bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text font-medium text-center text-2xl md:text-3xl lg:text-4xl">
                 Provendo as Melhores Soluções Industriais Sob Medida
