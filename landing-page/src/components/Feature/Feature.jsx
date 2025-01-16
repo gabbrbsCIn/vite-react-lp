@@ -5,6 +5,13 @@ import { useState } from 'react';
 
 export default function Feature() {
     const [currentImage, setCurrentImage] = useState(img1);
+    const [animate, setAnimate] = useState(false);
+
+    const changeImage = (img) => {
+        setCurrentImage(img);
+        setAnimate("animate-fade animate-ease-out");
+        setTimeout(() => setAnimate(false), 500);
+    }
 
     return (
         <section className="flex flex-col justify-center items-center bg-gray-100 mt-64 py-12 animate-fade-down">
@@ -21,7 +28,7 @@ export default function Feature() {
                 <div className="flex flex-col space-y-6 lg:space-y-10 w-full lg:w-1/2">
                     <div
                         className="flex flex-col items-center cursor-pointer justify-center p-6 bg-blue-900 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out"
-                        onClick={() => setCurrentImage(img1)}
+                        onClick={() => changeImage(img1)}
                     >
                         <h1 className="font-poppins text-white font-medium text-lg md:text-xl mt-4">
                             Manutenção Mecânica e Caldeiraria
@@ -33,7 +40,7 @@ export default function Feature() {
 
                     <div
                         className="flex flex-col items-center cursor-pointer justify-center p-6 bg-blue-900 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out"
-                        onClick={() => setCurrentImage(img2)}
+                        onClick={() => changeImage(img2)}
                     >
                         <h1 className="font-poppins text-white font-medium text-lg md:text-xl mt-4">
                             Fabricação e Montagem de Estruturas
@@ -45,7 +52,7 @@ export default function Feature() {
 
                     <div
                         className="flex flex-col items-center cursor-pointer justify-center p-6 bg-blue-900 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out"
-                        onClick={() => setCurrentImage(img3)}
+                        onClick={() => changeImage(img3)}
                     >
                         <h1 className="font-poppins text-white font-medium text-lg md:text-xl mt-4">
                             Instalações Industriais Personalizadas
@@ -58,7 +65,7 @@ export default function Feature() {
                 <img
                     src={currentImage}
                     alt="Imagem industrial"
-                    className="w-full lg:w-[50%] max-h-[400px] object-contain rounded-lg shadow-lg"
+                    className={`${animate} lg:w-[40%] max-h-[400px] object-contain rounded-lg shadow-lg`}
                 />
             </div>
         </section>
