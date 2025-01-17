@@ -1,7 +1,7 @@
 import men from "../../assets/men.jpg"
 export default function Hero() {
     return (
-        <section className="bg-hero-pattern bg-cover bg-center h-[60vh] flex justify-center transition animate-fade-up animate-duration-[1000ms]">
+        <section className="flex justify-center transition animate-fade-up animate-duration-[1000ms]">
             <div className="text-black text-center flex flex-wrap justify-center items-center px-6 md:px-12 lg:px-30 mt-8 w-full">
                 <div className="flex flex-col space-y-6 w-full md:w-2/3 lg:w-1/3 px-4">
                     <h1 className="font-poppins text-2xl md:text-3xl lg:text-4xl text-start font-bold">
