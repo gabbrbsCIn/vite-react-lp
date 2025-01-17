@@ -39,7 +39,7 @@ export default function Feature() {
 
     return (
         <section ref={sectionRef}
-            className={`flex flex-col justify-center items-center mt-64 py-12 ${isVisible ? "animate-fade-down" : "opacity-0"
+            className={`flex flex-col justify-center items-center mt-8 py-12 ${isVisible ? "animate-fade-down" : "opacity-0"
                 }`}>
 
             <h1 className="font-poppins bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text font-medium text-center text-2xl md:text-3xl lg:text-4xl">
