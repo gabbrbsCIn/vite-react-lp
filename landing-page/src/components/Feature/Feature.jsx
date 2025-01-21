@@ -42,7 +42,7 @@ export default function Feature() {
             className={`flex flex-col justify-center items-center mt-8 py-12 ${isVisible ? "animate-fade-down" : "opacity-0"
                 }`}>
 
-            <h1 className="font-poppins bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text font-medium text-center text-2xl md:text-3xl lg:text-4xl">
+            <h1 className="font-poppins bg-gradient-to-r from-blue-600 to-blue-800 text-transparent bg-clip-text font-medium text-center flex flex-wrap  px-6 md:px-12 lg:px-30 text-2xl md:text-3xl lg:text-4xl">
                 Provendo as Melhores Soluções Industriais Sob Medida
             </h1>
             <p className="font-poppins text-gray-500 text-center mt-4 px-4 md:px-12 lg:px-24">
@@ -53,7 +53,7 @@ export default function Feature() {
 
                 <div className="flex flex-col space-y-6 lg:space-y-10 w-full lg:w-1/2">
                     <div
-                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img1 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
+                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img1 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
                         onClick={() => changeImage(img1)}
                     >
                         <h1 className={`font-poppins font-medium text-lg md:text-xl mt-4`}>
@@ -65,7 +65,7 @@ export default function Feature() {
                     </div>
 
                     <div
-                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img2 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
+                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img2 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
                         onClick={() => changeImage(img2)}
                     >
                         <h1 className={`font-poppins font-medium text-lg md:text-xl mt-4`}>
@@ -77,7 +77,7 @@ export default function Feature() {
                     </div>
 
                     <div
-                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img3 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-xl shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
+                        className={`flex flex-col items-center transition duration-300 cursor-pointer ${currentImage === img3 ? "bg-blue-900 text-white" : "bg-white text-blue-900"} justify-center p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-200 ease-out`}
                         onClick={() => changeImage(img3)}
                     >
                         <h1 className={`font-poppins font-medium text-lg md:text-xl mt-4`}>
