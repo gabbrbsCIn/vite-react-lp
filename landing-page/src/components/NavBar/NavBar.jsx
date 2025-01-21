@@ -24,7 +24,7 @@ export default function NavBar() {
   }, [])
   return (
     <>
-      <nav className="flex justify-between items-center bg-white h-[120px] px-8 md:px-16 lg:px-32">
+      <nav className="flex justify-between items-center bg-white h-[120px] md:px-16 lg:px-32">
         <Logo />
 
         <div className="hidden lg:flex">
